@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/webview_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_invoke_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选中最新成交（home默认xml里选中）"/>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="fill_parent"
+        android:layout_height="51dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/tab_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rb_home"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:text="@string/home_tab_xiaoyoulu" />
+
+        <RadioButton
+            android:id="@+id/rb_latest"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:text="@string/home_tab_xiaoyouquen" />
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            style="@style/main_tab_bottom"
+            android:layout_width="fill_parent"
+            android:text="@string/rb_dj"/>
+
+    </RadioGroup>
+
+</LinearLayout>
