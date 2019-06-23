@@ -1,6 +1,8 @@
-package com.evan.androiddemos;
+package com.evan.java_learn;
 
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -9,12 +11,7 @@ import org.junit.Test;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() throws Exception {
-
-        char[] a = new char[1];
-        String test = new String(a);
-        System.out.print("test = "+test);
-
-//        assertEquals(4, 2 + 2);
+    public void addition_isCorrect() {
+        assertEquals(4, 2 + 2);
     }
 }
