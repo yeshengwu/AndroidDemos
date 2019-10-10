@@ -3,6 +3,8 @@ package com.evan.androiddemos;
 import android.app.Application;
 import android.content.Context;
 
+import com.bun.miitmdid.core.JLibrary;
+
 public class ChangxianApplication extends Application {
 
     public static ChangxianApplication sInstance;
@@ -22,6 +24,8 @@ public class ChangxianApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+
+        JLibrary.InitEntry(base);
     }
 
     @Override

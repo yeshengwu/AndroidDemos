@@ -13,6 +13,14 @@ import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 
 import com.evan.androiddemos.screenrecoder.AudioEncodeConfig;
 import com.evan.androiddemos.screenrecoder.Utils;
@@ -98,6 +106,65 @@ public class MainActivity extends AppCompatActivity {
 //        canvas.drawCircle
 //        canvas.drawRoun
 
+        TextView helloTv = (TextView) findViewById(R.id.tv_hello);
+        helloTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("evan","click1");
+            }
+        });
+        helloTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("evan","click2");
+            }
+        });
+
+//        BuildConfig.VERSION_CODE;
+
+//        String a = "";
+//        String a = null;
+//        int width =  Integer.parseInt(a);
+//        Log.e("evan","width = "+width);
+//        RecyclerView
+
+        SizeClient client = new SizeClient(new IADSize() {
+            @Override
+            public int getWidth() {
+                return 0;
+            }
+
+            @Override
+            public int getHeight() {
+                return 0;
+            }
+
+            @Override
+            public int getMode() {
+                return 0;
+            }
+        });
+        TestMain testMain = new TestMain(new IADSizeSub() {
+            @Override
+            public int getSub() {
+                return 0;
+            }
+
+            @Override
+            public int getWidth() {
+                return 0;
+            }
+
+            @Override
+            public int getHeight() {
+                return 0;
+            }
+
+            @Override
+            public int getMode() {
+                return 0;
+            }
+        });
     }
 
     // Code to manage Service lifecycle.

@@ -1,4 +1,4 @@
-package com.evan.java_learn;
+package com.evan.module;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
