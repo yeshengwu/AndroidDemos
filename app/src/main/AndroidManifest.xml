@@ -117,6 +117,13 @@
         <!--android:name="com.evan.androiddemos.UPNPActivity"-->
         <!--android:screenOrientation="portrait" />-->
 
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
