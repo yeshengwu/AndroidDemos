@@ -2,16 +2,14 @@ package com.evan.androiddemos;
 
 import org.junit.Test;
 
-import org.junit.Test;
-
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -23,7 +21,7 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         char[] chars = new char[1];
         String test = new String(chars);
-        System.out.print("test = "+test);
+        System.out.print("test = " + test);
 
 //        assertEquals(4, 2 + 2);
 
@@ -103,6 +101,47 @@ public class ExampleUnitTest {
         }
         /**************IllegalAccessError catch test*******************/
 
+        Person p = new Person("test", 20);
+        System.out.println(p);
+
+        List<String> data = new ArrayList<>();
+        data.add("a");
+        data.add("b");
+
+        String[] args = new String[0];
+        String[] evan = data.toArray(args);
+
+        System.out.println("evan.getClass() = " + evan.getClass());
+        System.out.println("p.getClass() = " + Person.class);
+        System.out.println("p.getClass() = " + p.getClass());
+
+        System.out.println("args = " + args.length);
+        for (String item : args) {
+            System.out.println("item = " + item);
+        }
+
+        final Class<String[]> stringArrayClass = String[].class;
+        System.out.println("stringArrayClass = " + stringArrayClass);
+
+        System.out.println("evan = " + evan.length);
+        for (String item : evan) {
+            System.out.println("i = " + item);
+        }
+
+        HashMap<String, String> aMap = new HashMap<String, String>();
+        aMap.put("a", "a");
+        aMap.put("b", "b");
+
+        HashMap<String, String> bMap = new HashMap<String, String>();
+        aMap.put("a", "a");
+        aMap.put("b", "b");
+
+        System.out.println("equals = " + (aMap.equals(bMap)));
+
+        System.out.println("aa = " + (500 > 500));
+
+//        testString2Stream("Example on how to convert a String to an InputStream");
+
         System.out.println("test finish");
     }
 
@@ -176,5 +215,41 @@ public class ExampleUnitTest {
         double y = price - m;
         return y > 0;
     }
+
+    private void testString2Stream(String text) {
+        if (text == null) return;
+        try {
+            InputStream is = new ByteArrayInputStream(text.getBytes());
+
+            int byteRead;
+            while ((byteRead = is.read()) != -1) {
+                System.out.print((char) byteRead);
+            }
+            System.out.println();
+            is.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static class Person {
+        public String name;
+        public int age;
+
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "name=8888'" + name + '\'' +
+                    ", age=" + age +
+                    '}';
+        }
+    }
+
 
 }
