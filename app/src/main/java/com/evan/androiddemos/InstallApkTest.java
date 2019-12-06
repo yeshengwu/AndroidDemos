@@ -127,6 +127,8 @@ public class InstallApkTest extends Activity {
 
         getDeviceIds(InstallApkTest.this);
 
+        startActivity(new Intent(this, TestActivity.class));
+
     }
 
     /**

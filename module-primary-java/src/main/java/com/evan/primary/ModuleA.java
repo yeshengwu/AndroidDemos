@@ -1,4 +1,4 @@
-package com.evan.module;
+package com.evan.primary;
 
 public class ModuleA {
     

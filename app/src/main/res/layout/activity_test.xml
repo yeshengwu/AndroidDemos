@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_activity_read"
-    android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/rl_activity_read_left_drawer"
-        android:background="@color/tab_text_pressed"
-        android:layout_width="60dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start">
+    <com.evan.androiddemos.widget.CollapsibleTextView
+        android:id="@+id/collapse_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-    </RelativeLayout>
+        app:collapsedLines="2"
+        app:doAnimator="true"
+        app:showHideSuffix="true"
+        app:suffixDrawableClose="@mipmap/expand_less"
+        app:suffixDrawableOpen="@mipmap/expand_more" />
 
-</android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

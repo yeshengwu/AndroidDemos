@@ -1,4 +1,4 @@
-package com.evan.module;
+package com.evan.primary;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
