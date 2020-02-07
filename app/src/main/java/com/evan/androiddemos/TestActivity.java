@@ -3,11 +3,17 @@ package com.evan.androiddemos;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 
-import com.evan.androiddemos.widget.CollapsibleTextView;
+import com.evan.androiddemos.event.EventToStore;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 public class TestActivity extends Activity{
+    private final String TAG = "TestActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,5 +36,19 @@ public class TestActivity extends Activity{
         d.put(2,false);
         d.get(1);
 //        PriorityQueue
+
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void toStore(EventToStore toStore) {
+        Log.d(TAG, "toStore.");
     }
 }
