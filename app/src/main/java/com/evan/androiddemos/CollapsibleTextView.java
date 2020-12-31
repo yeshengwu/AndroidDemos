@@ -12,8 +12,6 @@ import android.text.style.ClickableSpan;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.evan.androiddemos.R;
-
 /**
  * https://github.com/lcokean/CollapsibleTextView/blob/master/library/src/main/java/com/github/locke/library/CollapsibleTextView.java
  * */

@@ -10,9 +10,14 @@ import android.util.SparseBooleanArray;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
-import com.evan.androiddemos.widget.CollapsibleTextView;
+import com.evan.androiddemos.event.EventToStore;
 
-public class TestActivity extends Activity {
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+public class TestActivity extends Activity{
+    private final String TAG = "TestActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,5 +52,18 @@ public class TestActivity extends Activity {
                 Log.e("evan", "onGlobalLayout getLeft hasMargin d? = " + verticalTextView.getLeft()); // 结论：包括 margin 不包括padding
             }
         });
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void toStore(EventToStore toStore) {
+        Log.d(TAG, "toStore.");
     }
 }
