@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_activity_read"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.evan.androiddemos.widget.CollapsibleTextView
-        android:id="@+id/collapse_text"
+    <!--    <com.evan.androiddemos.widget.CollapsibleTextView-->
+    <!--        android:id="@+id/collapse_text"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+
+    <!--        app:collapsedLines="2"-->
+    <!--        app:doAnimator="true"-->
+    <!--        app:showHideSuffix="true"-->
+    <!--        app:suffixDrawableClose="@mipmap/expand_less"-->
+    <!--        app:suffixDrawableOpen="@mipmap/expand_more" />-->
+
+    <TextView
+        android:id="@+id/test1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="#ffff00"
+        android:text="Android-er"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/verticaltextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/test1"
+        android:background="#ff0000"
+        android:text="Android-er"
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
-        app:collapsedLines="2"
-        app:doAnimator="true"
-        app:showHideSuffix="true"
-        app:suffixDrawableClose="@mipmap/expand_less"
-        app:suffixDrawableOpen="@mipmap/expand_more" />
-
-
-</LinearLayout>
+</RelativeLayout>

@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 26
+//    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.evan.androiddemos"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -68,8 +68,12 @@ dependencies {
     //MSA 统⼀ SDK see \\192.168.3.26\wireless_soft_dept\Data\3RD Documents\MSA智能终端设备唯一标识SDK\v1.0.8
     implementation(name: 'miit_mdid_1.0.9', ext: 'aar')
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
+//    implementation 'com.android.support:appcompat-v7:26.0.0'
+    implementation 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    implementation 'com.android.support:design:25.0.0'
+
+    implementation 'com.android.support:recyclerview-v7:26.0.0-alpha1'  // 关键点：指定recyclerview低版本可以看源码，28的看不了
+
     testImplementation 'junit:junit:4.12'
 
     implementation 'org.fourthline.cling:cling-core:2.1.1'

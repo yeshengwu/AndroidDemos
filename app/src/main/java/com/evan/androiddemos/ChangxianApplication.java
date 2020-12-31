@@ -25,7 +25,7 @@ public class ChangxianApplication extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
 
-        JLibrary.InitEntry(base);
+//        JLibrary.InitEntry(base);
     }
 
     @Override

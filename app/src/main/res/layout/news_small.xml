@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <com.evan.androiddemos.widget.NewsBaseInfoView
+        android:id="@+id/newsfeed_item_article_base_info_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:news_lable="热"
+        app:news_popularity="新闻人气out"
+        app:news_source="新闻类型out"
+        app:news_time="新闻日期out" />
+
+</LinearLayout>

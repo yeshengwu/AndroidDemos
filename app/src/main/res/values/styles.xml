@@ -32,4 +32,19 @@
         <item name="android:layout_weight">1.0</item>
     </style>
 
+    <!--列表标签样式-->
+    <style name="ItemTagStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxEms">8</item>
+        <item name="android:maxLines">1</item>
+        <!--        <item name="android:textColor">?attr/item_tag_color</item>-->
+        <!--TODO evan test-->
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
 </resources>

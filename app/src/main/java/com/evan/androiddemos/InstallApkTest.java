@@ -127,8 +127,14 @@ public class InstallApkTest extends Activity {
 
         getDeviceIds(InstallApkTest.this);
 
-        startActivity(new Intent(this, TestActivity.class));
+//        startActivity(new Intent(this, TestActivity.class));
 
+        int whiteColor = getResources().getColor(R.color.tab_text_normal);
+        Log.e("evan","whiteColor = "+whiteColor);
+
+        int flag = -1;
+        int flagRe = flag | Intent.FLAG_ACTIVITY_NEW_TASK;
+        Log.e("evan","flagRe = "+flagRe); // https://github.com/alibaba/ARouter/issues/565  addFlags()无效,需要先withFlags初始化flag
     }
 
     /**

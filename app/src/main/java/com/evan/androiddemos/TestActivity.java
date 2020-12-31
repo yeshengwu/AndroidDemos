@@ -3,11 +3,16 @@ package com.evan.androiddemos;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.PagerSnapHelper;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.SparseBooleanArray;
+import android.view.ViewTreeObserver;
+import android.widget.TextView;
 
 import com.evan.androiddemos.widget.CollapsibleTextView;
 
-public class TestActivity extends Activity{
+public class TestActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,9 +31,21 @@ public class TestActivity extends Activity{
 //        Handler
 //        SparseArray
         SparseBooleanArray d = new SparseBooleanArray();
-        d.put(1,true);
-        d.put(2,false);
+        d.put(1, true);
+        d.put(2, false);
         d.get(1);
 //        PriorityQueue
+
+        final TextView verticalTextView = findViewById(R.id.verticaltextview);
+//        verticalTextView.setRotation(-90);
+        Log.e("evan", "getLeft hasMargin d? = " + verticalTextView.getLeft()); // 结论：不包括 margin padding 获取方式有误
+//        RecyclerView
+//        PagerSnapHelper
+        verticalTextView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                Log.e("evan", "onGlobalLayout getLeft hasMargin d? = " + verticalTextView.getLeft()); // 结论：包括 margin 不包括padding
+            }
+        });
     }
 }

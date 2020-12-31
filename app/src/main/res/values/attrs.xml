@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="NewsBaseInfoView">
+        <attr name="news_source" format="string|reference" />
+        <attr name="news_popularity" format="string|reference" />
+        <attr name="news_time" format="string|reference" />
+        <attr name="news_lable" format="string|reference" />
+        <attr name="news_dislike_visibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+    </declare-styleable>
+
+
     <declare-styleable name="NamedSpinner">
         <attr name="name" format="string|reference" />
         <attr name="textAppearance" format="reference" />
@@ -24,6 +37,27 @@
 
         <attr name="extendText" format="string"/>
         <attr name="extendTextSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="PlumbTextView">
+        <attr name="text" format="string|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension|reference" />
+        <attr name="letterSpacing" format="dimension|reference" />
+        <attr name="columnSpacing" format="dimension|reference" />
+        <attr name="regex" format="string|reference" />
+        <attr name="arrangeDirection">
+            <flag name="leftToRight" value="0" />
+            <flag name="rightToLeft" value="1" />
+        </attr>
+        <attr name="textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="leftLine" format="boolean" />
+        <attr name="leftLinePadding" format="dimension|reference" />
+        <attr name="leftLineColor" format="color|reference" />
     </declare-styleable>
 
 </resources>

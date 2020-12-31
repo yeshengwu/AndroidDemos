@@ -91,7 +91,7 @@
         android:resizeableActivity="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".InstallApkTest"
+            android:name=".TestNewsInfoActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -119,9 +119,9 @@
         <!--android:name="com.evan.androiddemos.UPNPActivity"-->
         <!--android:screenOrientation="portrait" />-->
 
-        <activity
-            android:name=".TestActivity"
-            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".TestActivity"-->
+<!--            android:screenOrientation="portrait" />-->
 
         <activity
             android:name=".MainActivity"

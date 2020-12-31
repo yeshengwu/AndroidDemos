@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toos="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="73dp"
+            android:layout_height="100dp"
+            android:background="@color/colorAccent"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/img_poster"
+            android:layout_alignBottom="@id/img_poster"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_poster">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:maxLines="1"
+                    android:text="我是标题我是标题"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_title"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:ellipsize="end"
+                    android:text="我是描述美丽的认识标号的厉害集合中国大海北京添加是否长沙武汉新疆浙江云南线程"
+                    android:gravity="left|center"
+                    android:maxLines="2"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_author"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/tab_container"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:textSize="12sp"
+                            android:text="作者" />
+
+                        <LinearLayout
+                            android:id="@+id/tab_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tab1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:paddingTop="1dp"
+                                    android:paddingRight="3dp"
+                                    android:paddingBottom="1dp"
+                                    android:visibility="gone"
+                                    toos:text="武侠" />
+
+                                <TextView
+                                    android:id="@+id/tab2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:paddingTop="1dp"
+                                    android:paddingRight="3dp"
+                                    android:paddingBottom="1dp"
+                                    android:visibility="gone"
+                                    toos:text="都市生活" />
+
+                                <TextView
+                                    android:id="@+id/tab3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:paddingTop="1dp"
+                                    android:paddingRight="3dp"
+                                    android:paddingBottom="1dp"
+                                    android:visibility="gone"
+                                    toos:text="青春言情" />
+
+                        </LinearLayout>
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>
+

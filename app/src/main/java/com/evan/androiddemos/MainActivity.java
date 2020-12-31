@@ -128,22 +128,6 @@ public class MainActivity extends AppCompatActivity {
 //        Log.e("evan","width = "+width);
 //        RecyclerView
 
-        SizeClient client = new SizeClient(new IADSize() {
-            @Override
-            public int getWidth() {
-                return 0;
-            }
-
-            @Override
-            public int getHeight() {
-                return 0;
-            }
-
-            @Override
-            public int getMode() {
-                return 0;
-            }
-        });
         TestMain testMain = new TestMain(new IADSizeSub() {
             @Override
             public int getSub() {
